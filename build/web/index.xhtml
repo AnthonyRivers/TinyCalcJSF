@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:aj="http://www.animatejsf.org/animate"
+      xmlns:mp="http://primefaces.org/ui/material"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Calculator</title>
+        <h:outputStylesheet library="css" name="style.css" />
+
+    </h:head>
+    <h:body>
+        <b:container id="formContainer">
+
+
+            <b:form>
+                <b:column span="12" offset-lg="2">
+
+                    <b:row>
+                    <h1 id="colorTitle">Tiny Calculator</h1>
+                    </b:row>
+                    <b:row>
+                        <b:inputText field-size="lg" id="top" value="#{calculatorBean.param1}"  />
+                    </b:row>
+                    <br/>
+                    <b:row>
+                        <b:inputText id="bottom" value="#{calculatorBean.param2}" field-size="lg"  />
+                    </b:row>
+                    <br/>
+                    <b:row>
+                        <b:commandButton actionListener="#{calculatorBean.add}" value="add" />
+                        <b:commandButton actionListener="#{calculatorBean.substract}" value="substract" />
+                        <b:commandButton actionListener="#{calculatorBean.multiply}" value="multiply" />
+                        <b:commandButton actionListener="#{calculatorBean.divide}" value="divide" />
+                                        </b:row>
+                    <br />
+                    <br/>
+                    <b:row>
+                        <b:column span="12">
+                    <b:label text="Result: " />
+                    &nbsp;
+                    <h:outputText id="outText" value="#{calculatorBean.result}" />
+                        </b:column>
+                    </b:row>
+                </b:column>
+               
+                    
+            </b:form>
+
+        </b:container>
+
+        <mp:input rendered="false"/>
+        <mp:button rendered="false" />
+    </h:body>
+
+
+</html>
+
