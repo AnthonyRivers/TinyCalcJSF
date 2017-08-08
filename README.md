@@ -3,4 +3,4 @@ Simple calculator made with Java EE 7 JSF to demonstrate the use of managed bean
 
 Following is a screenshot of the TinyCalc web application.
 
-[screenshot]:
+[screenshot]: https://github.com/AnthonyRivers/TinyCalcJSF/blob/master/TinyCalc.png "Screenshot of the web application"
